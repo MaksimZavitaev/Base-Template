@@ -22,6 +22,13 @@ global.config = {
             './bower_components/html5shiv/dist/html5shiv.js',
             './bower_components/html5shiv/dist/html5shiv-printshiv.js',
             './bower_components/respond/dest/respond.src.js'
+        ],
+        vendor: [
+            './bower_components/jQuery/dist/jquery.js'
+        ],
+        app: [
+            './src/javascripts/navigation.js',
+            './src/javascripts/common.js'
         ]
     }
 };
