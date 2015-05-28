@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/MaximZavitaev/Base-Template/issues"
   },
-  "homepage": "https://github.com/MaximZavitaev/Base-Template#readme"
+  "homepage": "https://github.com/MaximZavitaev/Base-Template#readme",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0"
+  }
 }
