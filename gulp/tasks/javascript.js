@@ -23,6 +23,13 @@ gulp.task('js:app:build', function () {
         .pipe(gulp.dest(PUBLIC_FOLDER + '/js'));
 });
 
+gulp.task('js:app:minify', ['js:app:build'], function () {
+    return gulp.src(PUBLIC_FOLDER + '/js/app.js')
+        .pipe($.uglify())
+        .pipe($.rename('app.min.js'))
+        .pipe(gulp.dest(PUBLIC_FOLDER + '/js'));
+});
+
 gulp.task('js:app:watch', ['js:app:build'], function () {
     gulp.watch(JS_FOLDER + '/**/*.js', ['js:app:build']);
 });
