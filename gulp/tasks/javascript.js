@@ -20,7 +20,8 @@ gulp.task('js:vendor', function () {
 gulp.task('js:app:build', function () {
     return gulp.src(config.js.app)
         .pipe($.concat('app.js'))
-        .pipe(gulp.dest(PUBLIC_FOLDER + '/js'));
+        .pipe(gulp.dest(PUBLIC_FOLDER + '/js'))
+        .pipe($.connect.reload());
 });
 
 gulp.task('js:app:minify', ['js:app:build'], function () {
