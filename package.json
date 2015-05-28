@@ -1,0 +1,19 @@
+{
+  "name": "base_template",
+  "version": "0.0.0",
+  "description": "Базовый шаблон для верстки сайта с помощью сетки Twitter Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximZavitaev/Base-Template.git"
+  },
+  "author": "Maxim Zavitaev <vskweb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaximZavitaev/Base-Template/issues"
+  },
+  "homepage": "https://github.com/MaximZavitaev/Base-Template#readme"
+}
