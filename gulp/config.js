@@ -1,8 +1,20 @@
+global.PUBLIC_FOLDER = './public';
+global.CSS_FOLDER = './src/stylesheets';
+global.JS_FOLDER = './src/javascripts';
+global.TEMP_FOLDER = './tmp';
+
 global.config = {
     server: {
         folder: "./public",
         port: 8080,
         liveReload: true
+    },
+    sass: {
+        includePaths: [
+            CSS_FOLDER,
+            './bower_components/bootstrap-sass/assets/stylesheets',
+            './bower_components/bourbon/app/assets/stylesheets'
+        ]
     },
     js: {
         ie: [

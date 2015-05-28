@@ -4,12 +4,9 @@ var gulp = require('gulp'),
     $ = require('gulp-load-plugins')();
 
 gulp.task('styles:build', function () {
-    return gulp.src('./src/sass/styles.scss')
+    return gulp.src(CSS_FOLDER + '/styles.scss')
         .pipe($.sass({
-            includePaths: [
-                './src/sass/',
-                './bower_components/bootstrap-sass/assets/stylesheets'
-            ]
+            includePaths: config.sass.includePaths
         }).on("error", $.notify.onError(function (error) {
             return "Error: " + error.message;
         })))
