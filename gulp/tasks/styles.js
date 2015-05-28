@@ -11,5 +11,13 @@ gulp.task('styles:build', function () {
             return "Error: " + error.message;
         })))
         .pipe(gulp.dest('./public/css'))
-        .pipe($.notify('Стили SASS успешно скомпилированы'));
+        .pipe($.connect.reload())
+        .pipe($.notify({
+            title: 'SASS',
+            message: 'Успешно скомпилировано'
+        }));
+});
+
+gulp.task('styles:watch', ['styles:build'], function () {
+    gulp.watch(CSS_FOLDER + '/**/*.scss', ['styles:build']);
 });
