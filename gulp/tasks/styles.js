@@ -10,11 +10,22 @@ gulp.task('styles:build', function () {
         }).on("error", $.notify.onError(function (error) {
             return "Error: " + error.message;
         })))
-        .pipe(gulp.dest('./public/css'))
+        .pipe(gulp.dest(PUBLIC_FOLDER + '/css'))
         .pipe($.connect.reload())
         .pipe($.notify({
             title: 'SASS',
             message: 'Успешно скомпилировано'
+        }));
+});
+
+gulp.task('styles:minify', ['styles:build'], function () {
+    return gulp.src(PUBLIC_FOLDER + '/css/styles.css')
+        .pipe($.cssmin())
+        .pipe($.rename('styles.min.css'))
+        .pipe(gulp.dest(PUBLIC_FOLDER + '/css'))
+        .pipe($.notify({
+            title: 'SASS',
+            message: 'Успешно минифицировано'
         }));
 });
 
