@@ -1,6 +1,7 @@
 global.PUBLIC_FOLDER = './public';
 global.CSS_FOLDER = './src/stylesheets';
 global.JS_FOLDER = './src/javascripts';
+global.HTML_FOLDER = './src/html';
 global.TEMP_FOLDER = './tmp';
 
 global.config = {
@@ -29,8 +30,12 @@ global.config = {
             './bower_components/jQuery/dist/jquery.js'
         ],
         app: [
-            './src/javascripts/navigation.js',
-            './src/javascripts/common.js'
+            JS_FOLDER + '/navigation.js',
+            JS_FOLDER + '/common.js'
         ]
-    }
+    },
+    css: [
+        PUBLIC_FOLDER + '/css/bootstrap.grid.css',
+        PUBLIC_FOLDER + '/css/styles.css'
+    ]
 };
