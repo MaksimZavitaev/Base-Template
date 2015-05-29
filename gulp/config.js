@@ -10,9 +10,11 @@ global.config = {
         liveReload: true
     },
     sass: {
-        includePaths: [
-            CSS_FOLDER,
+        bootstrap: [
             './bower_components/bootstrap-sass/assets/stylesheets',
+        ],
+        bourbon: [
+            CSS_FOLDER,
             './bower_components/bourbon/app/assets/stylesheets'
         ]
     },
